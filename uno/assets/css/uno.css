@@ -1,0 +1,141 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: calc(1em + 0.5rem);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    color: #F2F2F2;
+    font-size: calc(160px * 0.5);
+    user-select: none;
+    border-radius: 20px;
+    width: calc(280px / 2);
+    height: calc(395px * 0.5);
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.deck .card, .card.playable { cursor: grab; }
+
+.deck .card:active, .card.playable:active {
+    cursor: grabbing;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.player .card.playable {
+    top: -20px;
+}
+
+.card::before, .card::after {
+    content: attr(data-number);
+    position: absolute;
+    font-size: calc(48px * 0.5);
+}
+
+.card::before {
+    left: 6%;
+    top: 6%;
+}
+
+.card::after {
+    right: 6%;
+    bottom: 6%;
+}
+
+.card.green { background: linear-gradient(180deg, rgba(74,227,150,1) 0%, rgba(39,174,96,1) 100%); }
+.card.yellow { background: linear-gradient(180deg, rgba(242,201,76,1) 0%, rgba(245,182,122,1) 100%); }
+.card.blue { background: linear-gradient(180deg, rgba(47,128,237,1) 0%, rgba(77,85,240,1) 100%); }
+.card.red { background: linear-gradient(180deg, rgba(237,105,129,1) 0%, rgba(235,87,87,1) 100%); }
+
+.card.back {
+    background: url('/uno/assets/img/uno.svg') center center no-repeat, linear-gradient(180deg, rgba(83,86,91,1) 0%, rgba(38,45,61,1) 100%);
+    background-size: 100px auto, 100% 100%;
+    color: transparent;
+}
+
+.deck {
+    position: absolute;
+    top: 280px;
+    right: 100px;
+}
+
+.table {
+    position: relative;
+    width: calc(280px * 0.5);
+    height: calc(395px * 0.5);
+    margin: 40px auto;
+}
+
+.table .card, .deck .card {
+    position: absolute; 
+}
+
+.deck .card {
+    box-shadow: none;
+}
+
+.deck .card:last-child {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.table .card:nth-child(2n+1) {
+    transform: rotate(15deg);
+}
+
+.table .card:nth-child(5n) {
+    transform: rotate(-20deg);
+}
+
+.table .card:nth-child(4n) {
+    transform: rotate(-5deg);
+}
+
+.table .card:nth-child(6n) {
+    transform: rotate(-10deg);
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: relative;
+}
+
+.hand {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+    gap: 10px;
+    min-height: 197.5px;
+}
+
+.hand .card {
+    position: relative;
+}
+
+.currentPlayer {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    border: 10px solid #fff;
+    width: 200px;
+    position: fixed;
+    bottom: 50px;
+    left: 60px;
+    font-weight: bold;
+}
+
+.currentPlayer span {
+    font-weight: normal;
+}
