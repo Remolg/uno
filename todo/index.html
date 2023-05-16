@@ -1,24 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/todo.js" defer ></script>
-    <title>todo</title>
+    <script src="assets/js/todo.js" defer></script>
+    <title>Wunderlist</title>
 </head>
-<body>
-    
-    <form method="get">
-        <input type="text" name="Yapilacakis" placeholder="Yapılacak İş" id="">
-        <button>Ekle</button>
-    </form>
 
-    <ul class="todoList">
-        <li>deneme</li>
-    </ul>
+<body>
+
+    <div class="container">
+
+        <div class="left-side">
+            <div class="list-search box">
+                <a href=""><img src="assets/img/svg/burger-menu.svg" alt=""></a>
+                <a href=""><img src="assets/img/svg/search-svgrepo.svg" alt=""></a>
+            </div>
+            <div class="list-account box">
+                <div class="account">
+                    <img src="assets/img/png/Avatar.png" alt="">
+                    <a href="">Remolg <img src="assets/img/svg/down-arrow-backup.svg" alt=""></a>
+                </div>
+                <div class="lisc-account-button">
+                    <a href=""><img src="assets/img/svg/bell.svg" alt=""></a>
+                    <a href=""><img src="assets/img/svg/chat-bubble.svg" alt=""></a>
+                </div>
+            </div>
+            <ul class="list box">
+                <li>
+                    <a href="">
+                        <div class="list-text">
+                            <img src="assets/img/svg/inbox.svg" alt="">
+                            <p>inbox</p>
+                        </div>
+                        <p class="list-text-p">2</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="create-list box">
+                <a href="">
+                    <img src="assets/img/svg/plus.svg" alt="">
+                    <h3>Createlist</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="todo">
+            <div class="todo-top">
+                <p>Secilen Todo</p>
+                <div class="todo-top-imgs">
+                    <a href=""><img src="assets/img/svg/share.svg" alt=""></a>
+                    <a href=""><img src="assets/img/svg/sort.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="todo-main">
+                <div class="add-todo">
+                    <a href="">
+                        <img src="assets/img/svg/pluswhite.svg" alt="">
+                        <p>Add a to-do...</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

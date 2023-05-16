@@ -1,9 +1,169 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #46526a;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    height: 100%;
+}
+
+.left-side {
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.list-search {
+    background-color: #46526a;
+}
+
+.list-search img {
+    width: 30px;
+}
+
+.account {
+    display: flex;
+    align-self: center;
 }
 
 
-ul li {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
+.account a {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.account a img {
+    width: 20px;
+}
+
+.lisc-account-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+.lisc-account-button img {
+    width: 20px;
+}
+
+
+.list li {
+    list-style: none;
+    width: 100%;
+}
+
+.list li a {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-text p {
+    color: black;
+}
+
+.list li a img {
+    width: 30px;
+}
+
+.list-text-p {
+    color: #46526a;
+}
+
+.create-list a {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+    color: rgb(76, 185, 250);
+}
+
+.create-list a img {
+    width: 30px;
+}
+
+.box:last-child {
+    margin-top: auto;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.todo-top {
+    background-color: #53617f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.todo-top div {
+    display: flex;
+    padding: 10px;
+}
+
+.todo-top p {
+    padding-left: 30px;
+    color: white;
+    font-size: 25px;
+}
+
+.todo-top-imgs {
+    gap: 30px;
+}
+
+.todo-top-imgs img {
+    width: 30px;
+}
+
+.todo-main {
+    width: 100%;
+    padding: 20px;
+}
+
+.add-todo {
+    padding: 10px;
+    background-color: #53617f;
+}
+
+.add-todo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.add-todo a img {
+    width: 30px;
 }
