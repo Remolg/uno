@@ -1,5 +1,6 @@
-// let Ad = document.querySelector(`[name="KullaniciAdi"]`);
 
-document.querySelector('#todoButton').addEventListener('click', function() {
-    alert(document.querySelector('[name="Todo"]').value);
+let hamburger = document.querySelector("button");
+hamburger.addEventListener("click",function() {
+    document.getElementById("left-side").style.display = "none";
+    document.getElementById("container").style.gridTemplateColumns = "2fr 1fr";
 })
