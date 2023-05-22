@@ -16,9 +16,9 @@
 
     <div class="container">
 
-        <div class="left-side">
+        <div class="left-side" id="left-side">
             <div class="list-search box">
-                <a href="" ><img src="assets/img/svg/burger-menu.svg" alt=""></a>
+                <a href="" id="button"><img src="assets/img/svg/burger-menu.svg" alt=""></a>
                 <a href=""><img src="assets/img/svg/search-svgrepo.svg" alt=""></a>
             </div>
             <div class="list-account box">
@@ -60,17 +60,24 @@
             </div>
 
             <div class="todo-main">
-                <div class="add-todo">
+                <form  id="TodoForm" name="todo" method="post" autocomplete="off" class="add-todo">
                     <img src="assets/img/svg/pluswhite.svg" alt="">
-                    <input type="text" placeholder="Add a to-do... " class="todo-input">
-                </div>
+
+                    <input type="text" name="todo" placeholder="Add a to-do... " id="inputText" class="todo-input" required onkeydown="handleKeyDown(event)" >
+                </form>
 
                 <div class="todo-list">
-                    <div class="todos">
-                        <input type="checkbox" name="" id="todo">
-                        <p>Gelecek Olan Metin</p>
-                        <span>★</span>
-                    </div>
+                    <ul class="todoList">
+
+                    </ul>
+                    <!-- <div class="todos">
+                        <li>
+                            <input type="checkbox" name="" id="todo">
+                            <p>Gelecek Olan Metin</p>
+                            <Button>X</Button>
+                            <span>★</span>
+                        </li>
+                    </div> -->
                 </div>
 
             </div>

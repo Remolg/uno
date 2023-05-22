@@ -4,13 +4,14 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: auto 2fr 1fr;
+    display: flex;
     height: 100%;
 }
 
+/* left-side start */
+
 .left-side {
-    width: 350px;
+    width: 20%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -112,11 +113,16 @@ body {
     margin-top: auto;
 }
 
+/* left-side End */
+
+/* middle start */
+
+
 .todo {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100%;
+    width: 50%;
 }
 
 .todo-top {
@@ -182,7 +188,7 @@ body {
     margin-top: 20px;
 }
 
-.todos {
+.todoList {
     display: flex;
     text-align: center;
     align-items: center;
@@ -194,19 +200,24 @@ body {
     margin-top: 2px;
 }
 
-.todos input {
+.todoList input {
     width: 20px;
     height: 20px;
     margin-left: 20px;
 }
 
-.todos span {
+.todoList span {
     margin-left: auto;
     font-size: 30px;
     padding: 10px;
 }
+
+/* middle end */
+
+/* right-side start  */
+
 .todo-details {
-    width: 100%;
+    width: 30%;
     background-color: white;
     height: 100vh;
 }
@@ -234,3 +245,25 @@ body {
     padding: 10px;
 }
 
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+
+label {
+    user-select: none;
+}
+
+li input[type="text"] {
+    display: none;
+}
+
+.onEdit input[type="text"] {
+    display: inline;
+}
+
+.onEdit label {
+    display: none;
+}
+
+/* right-side end */
