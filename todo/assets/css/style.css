@@ -117,7 +117,6 @@ body {
 
 /* middle start */
 
-
 .todo {
     display: flex;
     flex-direction: column;
@@ -184,20 +183,26 @@ body {
     height: 30px;
 }
 
-.todo-list {
-    margin-top: 20px;
-}
+
 
 .todoList {
-    display: flex;
-    text-align: center;
+    padding: 0;
+    list-style: none;
+    text-align: left;
     align-items: center;
     gap: 15px;
     width: 100%;
-    background-color: white;
     color: black;
     height: 60px;
-    margin-top: 2px;
+    margin-top: 22px;
+}
+
+.todoList li {
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .todoList input {
@@ -206,10 +211,14 @@ body {
     margin-left: 20px;
 }
 
+.todoList input[type="checkbox"]:checked+p {
+    text-decoration: line-through;
+}
+
 .todoList span {
+    margin-right: 10px;
     margin-left: auto;
     font-size: 30px;
-    padding: 10px;
 }
 
 /* middle end */
@@ -243,27 +252,6 @@ body {
     margin-left: auto;
     font-size: 30px;
     padding: 10px;
-}
-
-input[type="checkbox"]:checked + label {
-    text-decoration: line-through;
-}
-
-
-label {
-    user-select: none;
-}
-
-li input[type="text"] {
-    display: none;
-}
-
-.onEdit input[type="text"] {
-    display: inline;
-}
-
-.onEdit label {
-    display: none;
 }
 
 /* right-side end */
